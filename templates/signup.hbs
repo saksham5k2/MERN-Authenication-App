@@ -1,0 +1,128 @@
+{{!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <center>
+
+    <h2>Signup</h2>
+    <form action="/signup" method="post">
+    <input type="text" name="name" placeholder="Name"><br>
+    <input type="date" name="dob" placeholder="DOB"><br>
+    <select name="gender" id=""><br>
+        <optgroup>
+            <option value="-1">Select</option>
+            <option value="Male">Male</option><br>
+        <option value="Female">Female</option><br>
+        <option value="Rather not say">Rather not say</option>
+        </optgroup>
+    </select><br>
+    <input type="email" name="email" placeholder="Email"><br>
+    <input type="password" name="password" placeholder="Password"><br>
+    
+    <input type="submit">
+    </form></center>
+    
+</body>
+</html> --}}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>signup</title>
+    <link rel="stylesheet" href="/public/signup.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    
+</style>
+  </head>
+  <body>
+    <nav class="navbar bg-body-tertiary fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">ShineyWise</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">ShineyWise</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/signup">Sign Up</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/login">Login</a>
+          </li>
+        </ul>
+      </div>
+      </div>
+</nav>
+<br>
+<br>
+<br>
+    <center><h1>Sign Up</h1></center>
+    <center><form action="/signup" name="signup" method="post" class="mb-3" id="formId">
+  <div class="col-md-4">
+    <label for="validationDefault01" class="form-label"></label>
+    <input type="text" name="name" placeholder="Name" pattern="[A-Za-z\sA-Za-z]+" class="form-control" id="validationDefault01" value=""  required>
+  </div>
+
+  {{!-- <div class="col-md-4">
+    <label for="validationDefault02" class="form-label">Last name</label>
+    <input type="text" class="form-control" id="validationDefault02" value="" required>
+  </div> --}}
+  <div class="col-md-4">
+    <label for="validationDefaultUsername" class="form-label"></label>
+    <div class="input-group">
+      <span class="input-group-text" id="inputGroupPrepend2">@</span>
+      <input type="text" placeholder="Username" name="username" class="form-control" id="validationDefaultUsername"  aria-describedby="inputGroupPrepend2" required>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <label for="inputEmail4" class="form-label"></label>
+    <input name="email" type="email" class="form-control" id="inputEmail4" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="name@example.com" placeholder="Email">
+  </div>
+
+  <div class="col-md-4">
+    <label for="validationDefault03" class="form-label"></label>
+    <input type="password" placeholder="Password" name="password" class="form-control" id="validationDefault03" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+  </div>
+  <div class="col-md-4">
+    <label for="validationDefault03" class="form-label"></label>
+    <input type="date" placeholder="Date of birth" name="dob" value="2001-01-01"
+       min="01-01-01" max="2023-02-28" class="form-control" id="validationDefault03"  required>
+  </div>
+  <div class="col-md-4">
+    <label for="validationDefault04" class="form-label"></label>
+    <select class="form-select" name="gender" id="validationDefault04" required>
+      <option selected disabled value="">Gender</option>
+      <option>Male</option>
+      <option>Female</option>
+      <option>Rather not say</option>
+    </select>
+  </div>
+  <br>
+  <div class="col-12">
+    <button class="btn btn-primary" type="submit">Submit form</button>
+  </div>
+</form>
+</center>
+
+<center><p><a href="/login">Already have an account? - Login here</a></p></center>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
+
+    </script>
+
+  </body>
+</html>
